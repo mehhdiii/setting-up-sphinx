@@ -27,6 +27,17 @@ setup sphinx project using quick start
 sphinx-quickstart
 ```
 
+### add path to your py scripts for them to be visible to sphinx: 
+goto docs >> source >> config.py and add the following line: 
+
+```
+import os
+import sys
+sys.path.insert(0, os.path.abspath('../..')) # or whatever your relative path to the source code is
+```
+
+now you can refer to your scripts using the above path as `base`
+
 ### Set up gh pages: 
 goto repository settings >> pages. select `/docs` as the build directory. 
 
